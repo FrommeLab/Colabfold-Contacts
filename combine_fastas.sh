@@ -26,14 +26,15 @@ for fileA in $dirA/*.fas
                 outputn="$outputA"_"$outputB"","
                 output="$outputA"_"$outputB"".csv"
 
-                #combines file names and files together, removes linebreaks, change output dir path (leave file name as temp)
-                cat <(echo -n $outputn) $fileA <(echo -n ':') $fileB | tr -d '\n' | tr -d '*'> /path/to/output/dir/temp
+                #combines file names and files together, removes linebreaks
+                cat <(echo -n $outputn) $fileA <(echo -n ':') $fileB | tr -d '\n' | tr -d '*'> ./temp_file
 
-                #adds header info needed for ColabFold, change output dir path (leave file name as temp)
-                cat <(echo 'id,sequence') /path/to/output/dir/temp > /home/rcv42/all_ORFs/golgiVsSnares/$output
+                #adds header info needed for ColabFold
+                #change output dir path (leave file name variable)!
+                cat <(echo 'id,sequence') ./temp > /path/to/output/dir/$output
                 
                 #removes temp file, change output dir path
-                rm /path/to/output/dir/temp
+                rm ./temp_file
 
         done
                 
