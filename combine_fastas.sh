@@ -31,7 +31,7 @@ for fileA in $dirA/*.fas
 
                 #adds header info needed for ColabFold
                 #change output dir path (leave file name variable)!
-                cat <(echo 'id,sequence') ./temp > /path/to/output/dir/$output
+                cat <(echo 'id,sequence') ./temp_file > /path/to/output/dir/$output
                 
                 #removes temp file, change output dir path
                 rm ./temp_file
