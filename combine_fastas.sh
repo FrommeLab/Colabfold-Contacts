@@ -18,7 +18,7 @@ for fileA in $dirA/*.fas
         for fileB in $dirB/*.fas
                 do
 
-                #assings variables for names, janky I know
+                #assigns variables for names, janky I know
                 extA=$(basename -- "$fileA")
                 outputA="${extA%.*}"
                 extB=$(basename -- "$fileB")
