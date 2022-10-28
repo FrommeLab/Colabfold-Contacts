@@ -30,8 +30,8 @@ bait = f['bait']
 
 for i in x:
 	t = f[i]
-	combined = "id,seq \n"+t.id.replace('.','_')+','+bait.seq+':'+t.seq
-	file = open(t.id.replace('.','_') + ".fasta", "w")
+	combined = "id,sequence\n"+t.id.replace('.','_')+','+bait.seq+':'+t.seq
+	file = open(t.id.replace('.','_') + ".csv", "w")
 	file.write(str(combined))
 	file.close()
 	
