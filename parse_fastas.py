@@ -10,9 +10,7 @@ from Bio import Seq
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--i', type=str, required=True, help='input file')
-parser.add_argument('--o', type=str, required=False,  nargs='?', const=1, 
-	default='scores.csv' , help='output file name')                 
+parser.add_argument('--i', type=str, required=True, help='input file')           
 args = parser.parse_args()
 
 input_file = open(args.i)
